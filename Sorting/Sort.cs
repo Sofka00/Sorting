@@ -7,20 +7,10 @@ using System.Threading.Tasks;
 
 namespace Sorting
 {
-    internal class Sort
+    public class Sort
     {
-        static void Main (int[] args)
-        {
-            Sort sort = new Sort();
-            int[] a = Sort.Generatot(20, 0, 10);
-            
-            sort.Write(a);
-            a = ViborSort(a);
-            sort.Write(a);
-
-          }
-
-        static int[] ViborSort(int[] array)
+      
+        public int[] ViborSort(int[] array)
         {
             for (int i = 0; i < array.Length - 1; i++)
             {
@@ -40,7 +30,7 @@ namespace Sorting
             return array;
 
         }
-        void Write(int[] array)
+        public void Write(int[] array)
         {
             for (int i = 0; i < array.Length; i++)
             {
@@ -48,7 +38,7 @@ namespace Sorting
             }
             Console.WriteLine();
         }
-        static int[] Generatot(int n, int min, int max)
+        public static int[] Generatot(int n, int min, int max)
         {
             int[] array = new int[n];
             Random random = new Random();
@@ -59,7 +49,7 @@ namespace Sorting
 
             return array;
         }
-        static int[] SelectSort(int[] array)
+        public static int[] SelectSort(int[] array)
         {
             for (int i = 0; i > array.Length - 1; i++)
             {
